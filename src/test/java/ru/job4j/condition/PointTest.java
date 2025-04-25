@@ -32,7 +32,7 @@ public class PointTest {
     void whenPoints11AndMinus2AndMinus2Then4Dot24() {
         int x1 = 1, y1 = 1, x2 = -2, y2 = -2;
         double expectedResult = 4.24;
-        double actualResult = Point.distance(x1,y1, x2, y2);
+        double actualResult = Point.distance(x1, y1, x2, y2);
         assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
     }
 }
