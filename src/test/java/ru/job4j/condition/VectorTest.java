@@ -27,4 +27,12 @@ public class VectorTest {
         String actualResult = Vector.addVectors(x1, y1, x2, y2);
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    void whenVectors22AndMinus3AndMinus3ThenResultMinus11() {
+        int x1 = 2, y1 = 2, x2 = -3, y2 = -3;
+        String expectedResult = "(-1, -1)";
+        String actualResult = Vector.addVectors(x1, y1, x2, y2);
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
