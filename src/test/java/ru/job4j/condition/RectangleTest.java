@@ -36,7 +36,7 @@ public class RectangleTest {
         double length = 10;
         double width = 40;
         double expectedResult = 41.23;
-        double actualResult = Rectangle.diagonal(length,width);
+        double actualResult = Rectangle.diagonal(length, width);
         assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
     }
 }
