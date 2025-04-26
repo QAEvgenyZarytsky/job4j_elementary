@@ -1,6 +1,7 @@
-package ru.job4j.colculator;
+package ru.job4j.calculator;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class TemperatureFitTest {
