@@ -69,7 +69,7 @@ public class CounterTest {
 
     @Test
     @DisplayName("When start and finis are negative values")
-        void whenStartMinus10AndFinishMinus5ThenMinus45() {
+    void whenStartMinus10AndFinishMinus5ThenMinus45() {
         int start = -10;
         int finish = -5;
         int expectedResult = -45;
@@ -86,4 +86,54 @@ public class CounterTest {
         int actualResult = Counter.sum(start, finish);
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("Sart and Finish are positive numbers")
+    void whenSumEvenNumbersFormTenToTwentyThenNinety() {
+        int start = 10;
+        int finish = 20;
+        int actualResult = Counter.sumByEven(start, finish);
+        int expectedResult = 90;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    @DisplayName("Start and Finish are negative numbers")
+    void whenSumEvenNumbersFormMinusTenToMinusFiveThenMinusTwentyFour() {
+        int start = -10;
+        int finish = -5;
+        int actualResult = Counter.sumByEven(start, finish);
+        int expectedResult = -24;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    @DisplayName("When start more then finish")
+    void whenSumEvenNumbersFormZeroToMinusOneThenZero() {
+        int start = 0;
+        int finish = -1;
+        int actualResult = Counter.sumByEven(start, finish);
+        int expectedResult = 0;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    @DisplayName("When start is negative number and finish is positive number")
+    void whenSumEvenNumbersFormMinusFiveToTenThenTwentyFour() {
+        int start = -5;
+        int finish = 10;
+        int actualResult = Counter.sumByEven(start, finish);
+        int expectedResult = 24;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
+
