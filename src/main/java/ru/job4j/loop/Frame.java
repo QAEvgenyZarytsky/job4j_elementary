@@ -9,11 +9,11 @@ public class Frame {
                 if (isTopOrBottomBorder && isSideBorder) {
                     System.out.print("+"); // Углы рамки
                 } else if (isTopOrBottomBorder) {
-                    System.out.print("-"); // Верхняя и нижняя границы
+                    System.out.print("-");
                 } else if (isSideBorder) {
-                    System.out.print("|"); // Левые и правые границы
+                    System.out.print("|");
                 } else {
-                    System.out.print(" "); // Внутреннее пространство рамки
+                    System.out.print(" ");
                 }
             }
             System.out.println();
