@@ -1,0 +1,49 @@
+package ru.job4j.loop;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class SavingsTest {
+    @Test
+    void whenGoal500Deposit100Percent5ThenYears5() {
+        double goal = 500;
+        double annualDeposit = 100;
+        double percent = 5;
+        int result = Savings.years(goal, annualDeposit, percent);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenGoal1000Deposit200Percent10ThenYears5() {
+        double goal = 1000;
+        double annualDeposit = 200;
+        double percent = 10;
+        int result = Savings.years(goal, annualDeposit, percent);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenGoal1000Deposit100Percent20ThenYears7() {
+        double goal = 1000;
+        double annualDeposit = 100;
+        double percent = 20;
+        int result = Savings.years(goal, annualDeposit, percent);
+        int expected = 7;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("When annualDeposit more then goal")
+    void whenAnnualDeposit1000AndGoal500ThenOneYear() {
+        double goal = 500;
+        double annualDeposit = 1000;
+        double percent = 5;
+        int actualResult = Savings.years(goal, annualDeposit, percent);
+        int expectedResult = 1;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+}
