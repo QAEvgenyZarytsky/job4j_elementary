@@ -10,4 +10,8 @@ public class Savings {
         } while (total < goal);
         return years;
     }
+
+    public static void main(String[] args) {
+        System.out.println(years(10000, 200, 5));
+    }
 }
