@@ -1,6 +1,14 @@
 package ru.job4j.array;
 
 public class MatrixCheck {
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int index = 0; index < board.length; index++) {
+            result[index] = board[index][index];
+        }
+        return result;
+    }
+
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
