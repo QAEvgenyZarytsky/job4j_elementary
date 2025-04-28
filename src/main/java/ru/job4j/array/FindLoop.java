@@ -3,18 +3,10 @@ package ru.job4j.array;
 public class FindLoop {
     public static int indexInRange(int[] data, int element, int start, int finish) {
         int result = -1;
-        if (data.length == 0) {
-            System.out.println("Error: data.length = 0!");
-        } else if (start > data.length || finish > data.length) {
-            System.out.println("Error: start or finish more then data.length!");
-        } else if (start > finish) {
-            System.out.println("Error: start more then finish!");
-        } else {
-            for (int index = start; index < data.length - (data.length - 1 - finish); index++) {
-                if (data[index] == element) {
-                    result = index;
-                    break;
-                }
+        for (int index = start; index <= finish; index++) {
+            if (data[index] == element) {
+                result = index;
+                break;
             }
         }
         return result;
