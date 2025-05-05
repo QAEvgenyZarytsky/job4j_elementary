@@ -40,4 +40,31 @@ public class PointTest {
         double actualResult = p1.distance(p2);
         assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
     }
+
+    @Test
+    void whenPoints123AndMinus1AndMinus2AndMinus3Then4Dot47() {
+        Point p1 = new Point(1, 2, 3);
+        Point p2 = new Point(-1, -2, -3);
+        double expectedResult = 4.47;
+        double actualResult = p1.distance(p2);
+        assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
+    }
+
+    @Test
+    void whenPoints51030And30205Then26Dot92() {
+        Point p1 = new Point(5, 10, 30);
+        Point p2 = new Point(30, 20, 5);
+        double expectedResult = 26.92;
+        double actualResult = p1.distance(p2);
+        assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
+    }
+
+    @Test
+    void whenPoints000And000Then0Dot0() {
+        Point p1 = new Point(0, 0, 0);
+        Point p2 = new Point(0, 0, 0);
+        double expectedResult = 0.0;
+        double actualResult = p1.distance(p2);
+        assertThat(actualResult).isEqualTo(expectedResult, withPrecision(0.01));
+    }
 }
